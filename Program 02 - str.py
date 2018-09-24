@@ -1,5 +1,10 @@
 sequence = input('Enter a DNA sequence: ')
 pattern = input('Enter the pattern: ')
+
+if pattern not in sequence:
+  print(pattern, 'not in DNA sequence.')
+  pattern = input('Enter a new pattern: ')
+
 opposite = pattern[::-1]
 
 pieces = sequence.split(pattern)
